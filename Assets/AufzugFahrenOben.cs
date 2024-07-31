@@ -9,7 +9,6 @@ public class AufzugFahrenOben : MonoBehaviour
     [SerializeField] int startPoint;
     [SerializeField] Transform[] points;
 
-
     int i;
     bool umkehren;
 
@@ -54,6 +53,7 @@ public class AufzugFahrenOben : MonoBehaviour
         if (kannFahren)
         {
             transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+
         }
 
     }

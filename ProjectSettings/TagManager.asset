@@ -10,6 +10,7 @@ TagManager:
   - MiniWorldCamera
   - Water
   - NPC
+  - "Aufzug T\xFCren innen"
   layers:
   - Default
   - TransparentFX
