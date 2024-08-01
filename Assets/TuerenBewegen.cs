@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TuerenBewegen : MonoBehaviour { 
 
-    public bool kannFahren;
+    public bool aufmachen;
 
     [SerializeField] float speed;
     [SerializeField] int startPoint;
@@ -19,20 +19,17 @@ public class TuerenBewegen : MonoBehaviour {
     void Start()
     {
         transform.position = points[startPoint].position;
-        i = startPoint;
-        
+        i = startPoint;  
     }
 
     // Update is called once per frame
     void Update()
                 
-        {
-        
-        Invoke("Warten", 1);
-
+    {
+    
         if (Vector3.Distance(transform.position, points[i].position) < 0.01f)
         {
-            kannFahren = false;
+            aufmachen = false;
 
             if (i == points.Length - 1)
             {
@@ -57,15 +54,11 @@ public class TuerenBewegen : MonoBehaviour {
             }
         }
 
-        if (kannFahren)
+        if (aufmachen)
         {
             transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
 
     }
 
-    private void Warten()
-    {
-        return;
-    }
 }

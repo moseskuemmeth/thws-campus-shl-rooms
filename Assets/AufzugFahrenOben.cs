@@ -17,16 +17,17 @@ public class AufzugFahrenOben : MonoBehaviour
     void Start()
     {
         transform.position = points[startPoint].position;
-        i = startPoint;
+        i = startPoint;  
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (Vector3.Distance(transform.position, points[i].position) < 0.01f)
         {
             kannFahren = false;
-
+       
             if (i == points.Length - 1)
             {
                 umkehren = true;
@@ -53,7 +54,7 @@ public class AufzugFahrenOben : MonoBehaviour
         if (kannFahren)
         {
             transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
-
+            
         }
 
     }
