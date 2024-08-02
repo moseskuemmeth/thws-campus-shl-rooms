@@ -11,6 +11,7 @@ TagManager:
   - Water
   - NPC
   - "Aufzug T\xFCren innen"
+  - Aufzug
   layers:
   - Default
   - TransparentFX
