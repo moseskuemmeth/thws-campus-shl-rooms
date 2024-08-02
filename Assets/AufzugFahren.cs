@@ -9,7 +9,7 @@ public class AufzugFahren : MonoBehaviour
     public GameObject door2;
     AufzugFahrenOben aufzug;
     public bool bewegen;
-    public 
+    public bool ;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class AufzugFahren : MonoBehaviour
             door2.GetComponent<TuerenBewegen>().aufmachen = true;
             door1.GetComponent<TuerenBewegen>().aufmachen = true;
             bewegen = false;
-            Invoke("Close", 5f);
+            Invoke("TuerenSchliessen", 5f);
         }
     }
 
@@ -36,7 +36,7 @@ public class AufzugFahren : MonoBehaviour
         //bewegen = true;
         door2.GetComponent<TuerenBewegen>().aufmachen = true;
         door1.GetComponent<TuerenBewegen>().aufmachen = true;
-        Invoke("AufzugFahren", 2);
+        Invoke("Fahren", 2);
     }
 
     private void Fahren()
