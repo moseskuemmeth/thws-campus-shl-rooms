@@ -13,7 +13,7 @@ public class Moving : MonoBehaviour
 
 
     int i;
-    bool reverse;
+    public bool reverse; // if reverse is true, the door is open/elevator is up(erdgeschoss), else the door is closed/elevator is down(cafeteria).
 
 
     // Start is called before the first frame update
